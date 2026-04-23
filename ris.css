@@ -1,0 +1,588 @@
+/* ASEGURADORAS */
+.insurance-section {
+    background: #f8f9fb;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.insurance-section h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.insurance-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+    text-align: left;
+}
+
+.insurance-columns ul {
+    list-style: none;
+    padding: 0;
+}
+
+.insurance-columns li {
+    margin: 6px 0;
+    color: #555;
+}
+
+/* LOGOS */
+.insurance-logos {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 25px;
+    align-items: center;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.insurance-logos img {
+    width: 100%;
+    max-height: 60px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: 0.3s;
+}
+
+.insurance-logos img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   VARIABLES
+========================= */
+:root {
+    --dark-bg: #9d627f;
+    --teal-main: #9d627f;
+    --soft-gray: #ffffff;
+    --white: #f2ecec;
+    --text-dark: #d53535;
+    --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(rgba(16, 16, 16, 0.4), rgba(0,0,0,0.4)),
+                url("https://images.unsplash.com/photo-1586773860418-d37222d8fce3") center/cover fixed;
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: #9d627f;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    color: white;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 18px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+.btn-cita {
+    background: var(--teal-main);
+    padding: 8px 14px;
+    border-radius: 6px;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+    min-height: 100vh;
+    padding-top: 120px;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    max-width: 900px;
+}
+
+.hero p {
+    margin-top: 10px;
+    opacity: 0.9;
+}
+
+.btn-primary {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: var(--teal-main);
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* =========================
+   CARRUSEL
+========================= */
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    animation: scroll 20s linear infinite;
+}
+
+.card-xray {
+    width: 195px;
+    height: 218px;
+    border-radius: 109px;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: 0 10px 24px rgba(35, 34, 34, 0.3);
+}
+
+.card-xray img {
+    width: 101%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* =========================
+   NOSOTROS
+========================= */
+.info-section {
+    padding: 80px 10%;
+    background: white;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.info-card {
+    background: var(--soft-gray);
+    padding: 30px;
+    border-radius: 15px;
+    transition: var(--transition);
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+    background: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   ESPECIALIDADES
+========================= */
+.specialties {
+    padding: 80px 10%;
+    background: #eaf5f5;
+    text-align: center;
+}
+
+.specialties-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.spec-list {
+    width: 40%;
+}
+
+.spec-card {
+    background: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.spec-card:hover {
+    background: var(--teal-main);
+    color: white;
+}
+
+.spec-display {
+    width: 55%;
+}
+
+.spec-display img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* =========================
+   DOCTORES (PRO)
+========================= */
+.doctors-section {
+    padding: 80px 10%;
+    background: white;
+}
+
+.doctors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.doctor-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.doc-img img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.doc-info {
+    padding: 20px;
+    background: var(--dark-bg);
+    color: white;
+    transition: var(--transition);
+}
+
+/* OVERLAY */
+.doctor-card::after {
+    content: "Ver perfil completo";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(81, 141, 141, 0.6);
+    color: white;
+
+    opacity: 0;
+    transition: 0.4s ease;
+    backdrop-filter: blur(6px);
+}
+
+/* HOVER */
+.doctor-card:hover {
+    transform: scale(1.05);
+}
+
+.doctor-card:hover .doc-img img {
+    filter: brightness(0.6);
+}
+
+.doctor-card:hover .doc-info {
+    opacity: 0.3;
+}
+
+.doctor-card:hover::after {
+    opacity: 1;
+}
+
+/* =========================
+   FORMULARIO
+========================= */
+.medical-section {
+    padding: 80px 10%;
+    background: #f2f2f2;
+}
+
+.medical-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 51px;
+    border: 1px solid #dc1e1e;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.main-footer {
+    background: var(--dark-bg);
+    color: #363232;
+    padding: 2px 8%;
+}
+
+/* =========================
+   WHATSAPP
+========================= */
+.whatsapp-float {
+    position: fixed;
+    bottom: 22px;
+    right: 20px;
+    background: #02ff60;
+    color: white;
+    font-size: 26px;
+    padding: 16px;
+    border-radius: 50%;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 767px) {
+    .specialties-container {
+        flex-direction: column;
+    }
+
+    .spec-list,
+    .spec-display {
+        width: 100%;
+    }
+
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
+/* ANIMACIONES */
+.fade-up {
+    opacity: 0;
+    transform: translateY(49px);
+    transition: all 30.5s ease;
+}
+
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hero h1 {
+    animation: fadeIn 1.2s ease forwards;
+}
+
+.hero p {
+    animation: fadeIn 2s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px);}
+    to { opacity: 2; transform: translateY(0);}
+}
+
+.btn-primary:hover,
+.btn-cta:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(234, 36, 36, 0.3);
+}
+
+
+
+.carousel-container {
+    margin-bottom: 35px; /* separa el carrusel del hero */
+}
+
+.hero {
+    padding-top: 58px;
+    margin-top: 17px;
+}
+
+.reverse .carousel-track {
+    animation-direction: reverse;
+}
+
+
+.doc-img a {
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+
+.doc-img img {
+    pointer-events: auto;
+}
+
+
+
+
+
+/* ARCHIVO CLÍNICO */
+.file-section {
+    padding: 60px 20px;
+    background: #eef3f8;
+    text-align: center;
+}
+
+.file-card {
+    max-width: 900px;
+    margin: 30px auto;
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+/* ESTILO TIPO EXPEDIENTE */
+.file-header {
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.file-header h3 {
+    margin: 0;
+}
+
+.file-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.file-block {
+    margin-top: 20px;
+}
+
+.file-block h4 {
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+/* IMPRESIÓN */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #file-output, #file-output * {
+        visibility: visible;
+    }
+    #file-output {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+}
+
+
+.doctors-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 por fila */
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+    .doctors-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .doctors-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.doctors-section h2 {
+    text-align: center;
+}
+
+
+
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: scroll 25s linear infinite;
+}
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
